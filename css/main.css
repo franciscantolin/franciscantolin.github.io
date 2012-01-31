@@ -2,10 +2,21 @@ html {
   overflow-y: scroll;
 }
 body {
-	color:#fff;
+	color: #751500;
+    font-weight: bold;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:11px;
 	background:#F6F1EA url('../images/background.jpg') repeat fixed;
+}
+h1 {
+	font-size: 28px;
+	line-height: 10px;
+	/*text-shadow: 2px 2px 2px #000000;*/
+	/*filter: dropshadow(color=#000000, offx=2, offy=2);*/
+	margin-bottom: 12px;
+}
+h2 {
+    font-size: 14px;
 }
 div#wrapper {
 	width:983px;
@@ -91,7 +102,7 @@ div#footer p span {
 }
 
 
-.thumbs { margin: 0; padding: 0; overflow: hidden; }
+.thumbs { margin: 0; padding: 0; overflow: hidden; margin-bottom: 20px;}
 .thumbs li { list-style: none; float: left; margin: 5px; padding: 3px; background: #eee; -moz-box-shadow: 0 0 4px #444; -webkit-box-shadow: 0 0 2px #000; }
 .thumbs li a { }
 .thumbs li img { display: block; }
@@ -140,52 +151,3 @@ div#images img {
 }
 
 
-/*** editor ***/
-div#editor {
-	line-height:1.4em;
-	padding:0 73px 0 74px;
-}
-div#editor h1 {
-	font-size: 2.4em;
-	margin-bottom:1em;
-}
-div#editor h2 {
-	font-size: 1.8em;
-	margin-bottom:1em;
-}
-div#editor h3 {
-	font-size: 1.4em;
-	margin-bottom:1em;
-}
-div#editor h4 {
-	font-size: 1.2em;
-	margin-bottom:1em;
-}
-div#editor h5 {
-	font-size: 1em;
-	margin-bottom:1em;
-}
-div#editor h6 {
-	font-size: 0.9em;
-	margin-bottom:1em;
-}
-div#editor p,
-div#editor ul,
-div#editor ol,
-div#editor div {
-	margin-bottom:1.4em;
-}
-div#editor a {
-	color:#000;
-}
-div#editor a:hover {
-	text-decoration:none;
-}
-div#editor ul li {
-	list-style-type: disc;
-	margin-left:15px;
-}
-div#editor ol li {
-	list-style-type:decimal;
-	margin-left:18px;
-}

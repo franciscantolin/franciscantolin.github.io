@@ -20,7 +20,8 @@
 			cleanDescription: true,
 			useTemplate: true,
 			itemTemplate: '',
-			itemCallback: function(){}
+			itemCallback: function(){},
+			headCallback: function(){}
 		}, settings);
 
 		var url = settings.flickrbase + settings.feedapi + '?';
@@ -36,7 +37,12 @@
 		return $(this).each(function(){
 			var $container = $(this);
 			var container = this;
-			$.getJSON(url, function(data){
+
+			
+			var request = $.getJSON(url, function(data){
+				
+				var section = settings.headCallback.call(container, data) || this;
+				
 				$.each(data.items, function(i,item){
 					if(i < settings.limit){
 					
@@ -63,20 +69,15 @@
 						
 						// Use Template
 						if(settings.useTemplate){
-							var template = settings.itemTemplate;
-							for(var key in item){
-								var rgx = new RegExp('{{' + key + '}}', 'g');
-								template = template.replace(rgx, item[key]);
-							}
-							$container.append(template)
+							$(section).append(applyTemplate(item, settings.itemTemplate))
 						}
 						
 						//itemCallback
-						settings.itemCallback.call(container, item);
+						settings.itemCallback.call(section, item);
 					}
 				});
 				if($.isFunction(callback)){
-					callback.call(container, data);
+					callback.call(section, data);
 				}
 			});
 		});
