@@ -1,16 +1,3 @@
-
-window.globalCounter = 0;
-window.currentSection = null;
-
-function isNewSection(title){
-	return !title.match(/_\d+$/) || title.match(/_0$/)
-}
-
-function appendTo(container, child, counter){
-	if(counter == window.globalCounter)
-		$(container).append(child);
-}
-
 function applyTemplate(item, template){
 	for(var key in item){
 		var rgx = new RegExp('{{' + key + '}}', 'g');
@@ -20,67 +7,83 @@ function applyTemplate(item, template){
 }
 
 
-function loadImages(flickrSetIds, index, counter) {
-	$('#content').jflickrfeed({
-		flickrbase: 'http://api.flickr.com/services/feeds/',
-		feedapi: 'photoset.gne',
-		useTemplate: false,
-		qstrings: {
-			set: flickrSetIds[index],
-			nsid: '73806935@N03',
-			limit: 50,
-			lang: 'en-us'
-		},
-		headCallback: function(data) { 
-			if(isNewSection(data.title))
-			{
-				var headTemplate = '<h1>{{title}}</h1><h2>{{description}}</h2><hr/>';
-			    appendTo(this, applyTemplate(data, headTemplate), counter);
-			    var section = $('<ul class="thumbs"></ul>');
-			    appendTo(this, section, counter);
-			    window.currentSection = section;
-			}
-		    return window.currentSection;
-		},
-		itemCallback: function(item) {
-			var itemTemplate =  
-			'<li>'+
-				'<a rel="colorbox" href="{{image_z}}" title="{{title}}">' +
-					'<img src="{{image_m}}" alt="{{title}}" height="180px" />' +
-				'</a>' +
-			'</li>';
-			appendTo(this, applyTemplate(item, itemTemplate), counter);
-		}
-	}, function(data) {
-		index += 1;
-		if (index < flickrSetIds.length && counter == window.globalCounter)
-			loadImages(flickrSetIds, index, counter)
-		if(isNewSection(data.title))
-		 	$(this).find('a').colorbox();
-	});
+function loadImages(photosetId, container) {
+  var photoSet = getPhotoset(photosetId);
+  if(photoSet==null){
+    alert('Photoset no encontrado!!');
+    return;
+  }
+  for(var i=0;i<photoSet.photos.length;i++)
+    $(container).append(buildPhotoElement(photoSet.photos[i]));
+
+  $(container).find('a').colorbox({"width": "650px", "height": "550px"});
+}
+
+function buildPhotoElement(photo){
+  var photoTemplate = 
+    '<a rel="colorbox" href="{{size_z}}" title="{{title}}">' +
+      '<div style="width:100%;height:100%;background:url(\'{{size_m}}\') center no-repeat;"></div>'+
+    '</a>'; 
+
+  var photoObject = {
+    'title'  : photo['title'],
+    'url'    : photo['url'],
+    'size_z' : photo['url'].replace('.jpg', '_z.jpg'),
+    'size_m' : photo['url'].replace('.jpg', '_m.jpg'),
+    'size_b' : photo['url'].replace('.jpg', '_b.jpg'),
+    'size_s' : photo['url'].replace('.jpg', '_s.jpg')
+  };
+
+  return applyTemplate(photoObject, photoTemplate);
+}
+
+function getPhotoset(photosetId)
+{
+  for(var i=0;i<photosets.length;i++)
+    if(photosets[i]['id']==photosetId)
+      return photosets[i];
+
+  return null;
 }
 
 $(document).ready(function(){
-    var flickrSets = {
-		"lnkPiedras": ["72157628773264369"],
-		"lnkIlustraciones": ["72157628870675035", "72157628870721327", "72157628870763783", "72157628870780837"],
-		"lnkPublicaciones": ["72157628870806227", "72157628870826587"],
-		"lnkMunecas": [],
-		"lnkContacto": []
-	};
+	$('#menu A[photosetid]').click(function(){
+		var photosetId = $(this).attr('photosetid');
+    $('#menu .selected').removeClass('selected');
+    $(this).addClass('selected');
+    $('.scrollable').remove();
 
-	$('#mainNav A').click(function(){
-		window.globalCounter += 1;
-		var flickrSet = flickrSets[this.id];
-		if(flickrSet && flickrSet.length > 0){
-			$('#mainNav .active').removeClass('active');
-			$(this).addClass('active');
-			$('#content').empty();
-			loadImages(flickrSet, 0, window.globalCounter);
-		}
-		else
-			alert("Opción no implementada");
+    var scrollableTemplate = '\
+    <li class="scrollable" style="display:none"> \
+      	<div class="scrollingHotSpotLeft">&nbsp;</div> \
+        <div class="scrollingHotSpotRight">&nbsp;</div> \
+        <div class="scrollWrapper"> \
+          <div class="scrollableArea"> \
+          </div> \
+        </div> \
+    </li>';
+
+    $(this).parent().after(scrollableTemplate);
+    loadImages(photosetId, $('.scrollableArea'));
+
+    $(".scrollable").show().smoothDivScroll({ 
+      autoScroll: "onstart",
+      autoScrollDirection: "backandforth", 
+      autoScrollStep: 1, 
+      autoScrollInterval: 15,	
+      startAtElementId: "startAtMe",
+      visibleHotSpots: "always"
+    }).bind("click", function() {
+      $(this).smoothDivScroll("stopAutoScroll");
+    });
+    
+    // Start autoscrolling again when the user closes
+    // the colorbox overlay
+    $(document).bind('cbox_closed', function(){
+      $(".scrollable").smoothDivScroll("startAutoScroll");
+    });
+
+    $(".scrollingHotSpotLeft").css({"display": "block"});
 	});
-	
-	
 });
+
