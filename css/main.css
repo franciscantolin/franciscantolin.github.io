@@ -70,6 +70,16 @@ ul#menu li a.active {
 
 div#footer {
 	text-align:center;
+  color: #B65D37;
 }
 
 
+div#footer a {
+	color:#0099ff;
+	text-decoration:none;
+	font-weight:bold;
+}
+div#footer a.selected {
+	text-decoration:none;
+	font-weight:bold;
+}
