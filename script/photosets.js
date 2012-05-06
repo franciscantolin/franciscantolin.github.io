@@ -458,11 +458,6 @@ var photosets = [
         "url": "http://farm8.staticflickr.com/7196/6967610433_403136500f.jpg"
       }, 
       {
-        "id": "6935272410", 
-        "title": "DSC01615", 
-        "url": "http://farm8.staticflickr.com/7225/6935272410_d083bfdd4f.jpg"
-      }, 
-      {
         "id": "7081346925", 
         "title": "DSC01618", 
         "url": "http://farm8.staticflickr.com/7118/7081346925_992c67742d.jpg"
@@ -476,16 +471,6 @@ var photosets = [
         "id": "6658448917", 
         "title": "DSC00947", 
         "url": "http://farm8.staticflickr.com/7158/6658448917_7976135fb1.jpg"
-      }, 
-      {
-        "id": "6658449535", 
-        "title": "DSC00948", 
-        "url": "http://farm8.staticflickr.com/7003/6658449535_21fa651382.jpg"
-      }, 
-      {
-        "id": "6658451185", 
-        "title": "DSC00953", 
-        "url": "http://farm8.staticflickr.com/7165/6658451185_b845fb8234.jpg"
       }, 
       {
         "id": "6967601735", 
@@ -508,11 +493,6 @@ var photosets = [
         "url": "http://farm8.staticflickr.com/7020/6658456249_a7f680159f.jpg"
       }, 
       {
-        "id": "6658459477", 
-        "title": "DSC01165", 
-        "url": "http://farm8.staticflickr.com/7015/6658459477_f7a9c23160.jpg"
-      }, 
-      {
         "id": "6658457661", 
         "title": "DSC01157", 
         "url": "http://farm8.staticflickr.com/7027/6658457661_ee85117737.jpg"
@@ -523,11 +503,6 @@ var photosets = [
         "url": "http://farm8.staticflickr.com/7203/6821413524_2fb79cb46f.jpg"
       }, 
       {
-        "id": "6935242186", 
-        "title": "DSC01687", 
-        "url": "http://farm8.staticflickr.com/7036/6935242186_91c9c0fd85.jpg"
-      }, 
-      {
         "id": "6935244158", 
         "title": "DSC01688", 
         "url": "http://farm6.staticflickr.com/5038/6935244158_f789268713.jpg"
@@ -536,11 +511,6 @@ var photosets = [
         "id": "7081293585", 
         "title": "IMG_7957", 
         "url": "http://farm8.staticflickr.com/7241/7081293585_10023841cb.jpg"
-      }, 
-      {
-        "id": "6935222560", 
-        "title": "IMG_7963", 
-        "url": "http://farm8.staticflickr.com/7122/6935222560_8c3c9f52ec.jpg"
       }, 
       {
         "id": "6886402236", 
@@ -583,11 +553,6 @@ var photosets = [
         "url": "http://farm8.staticflickr.com/7067/6821428368_ae9447cdcc.jpg"
       }, 
       {
-        "id": "6967540651", 
-        "title": "DSC01479", 
-        "url": "http://farm8.staticflickr.com/7190/6967540651_d2e84d6b4f.jpg"
-      }, 
-      {
         "id": "6967595625", 
         "title": "CRW_1186_RJ", 
         "url": "http://farm8.staticflickr.com/7054/6967595625_e243f0ec9c.jpg"
@@ -613,11 +578,6 @@ var photosets = [
         "url": "http://farm8.staticflickr.com/7070/6821422380_1f6863ac3b.jpg"
       }, 
       {
-        "id": "6967546261", 
-        "title": "DSC01319", 
-        "url": "http://farm8.staticflickr.com/7185/6967546261_a010558bec.jpg"
-      }, 
-      {
         "id": "6967557289", 
         "title": "DSC01526", 
         "url": "http://farm8.staticflickr.com/7045/6967557289_a492f59f42.jpg"
@@ -641,11 +601,6 @@ var photosets = [
         "id": "7081345043", 
         "title": "DSC01599", 
         "url": "http://farm8.staticflickr.com/7092/7081345043_912d25f4e4.jpg"
-      }, 
-      {
-        "id": "7081348329", 
-        "title": "DSC01614", 
-        "url": "http://farm8.staticflickr.com/7279/7081348329_313d38deb9.jpg"
       }, 
       {
         "id": "7081349193", 
@@ -728,19 +683,9 @@ var photosets = [
         "url": "http://farm8.staticflickr.com/7185/6886400272_1e0782b365.jpg"
       }, 
       {
-        "id": "6658467489", 
-        "title": "DSC01306", 
-        "url": "http://farm8.staticflickr.com/7023/6658467489_73206ef127.jpg"
-      }, 
-      {
         "id": "6658466179", 
         "title": "DSC01304", 
         "url": "http://farm8.staticflickr.com/7156/6658466179_c0fd008287.jpg"
-      }, 
-      {
-        "id": "6658465539", 
-        "title": "DSC01301", 
-        "url": "http://farm8.staticflickr.com/7159/6658465539_f0f4885465.jpg"
       }, 
       {
         "id": "7032494441", 
@@ -753,16 +698,6 @@ var photosets = [
         "url": "http://farm8.staticflickr.com/7175/6658452507_ae7e3e3755.jpg"
       }, 
       {
-        "id": "6658454413", 
-        "title": "DSC01003", 
-        "url": "http://farm8.staticflickr.com/7025/6658454413_386742e37e.jpg"
-      }, 
-      {
-        "id": "6886398880", 
-        "title": "13", 
-        "url": "http://farm8.staticflickr.com/7086/6886398880_2359bf3be6.jpg"
-      }, 
-      {
         "id": "6886401334", 
         "title": "4", 
         "url": "http://farm8.staticflickr.com/7256/6886401334_f24bc8853c.jpg"
@@ -770,7 +705,7 @@ var photosets = [
       {
         "id": "6886398654", 
         "title": "12", 
-        "url": "http://farm8.staticflickr.com/7068/6886398654_2fd62c9258.jpg"
+        "url": "http://farm8.staticflickr.com/7068/6886398654_760aa32868.jpg"
       }, 
       {
         "id": "6886399124", 
@@ -823,11 +758,6 @@ var photosets = [
         "url": "http://farm8.staticflickr.com/7120/6935243262_7a4d358288.jpg"
       }, 
       {
-        "id": "6935239370", 
-        "title": "DSC01663", 
-        "url": "http://farm8.staticflickr.com/7126/6935239370_6c81530719.jpg"
-      }, 
-      {
         "id": "7081314163", 
         "title": "DSC01662", 
         "url": "http://farm6.staticflickr.com/5330/7081314163_b30f74aa78.jpg"
@@ -846,6 +776,16 @@ var photosets = [
         "id": "7032496113", 
         "title": "17", 
         "url": "http://farm8.staticflickr.com/7099/7032496113_f01a6ba59d.jpg"
+      }, 
+      {
+        "id": "7003075538", 
+        "title": "DSC01717", 
+        "url": "http://farm9.staticflickr.com/8154/7003075538_09aa7d38d5.jpg"
+      }, 
+      {
+        "id": "7149172935", 
+        "title": "DSC01708", 
+        "url": "http://farm8.staticflickr.com/7072/7149172935_f02425b4ca.jpg"
       }
     ], 
     "title": "Piedras"
