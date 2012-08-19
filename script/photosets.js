@@ -444,6 +444,11 @@ var photosets = [
         "id": "6935247502", 
         "title": "IMG_8282", 
         "url": "http://farm6.staticflickr.com/5197/6935247502_82aceaeb42.jpg"
+      }, 
+      {
+        "id": "7814219490", 
+        "title": "DSC01993", 
+        "url": "http://farm8.staticflickr.com/7277/7814219490_4e6fbbdfea.jpg"
       }
     ], 
     "title": "Ilustraciones"
@@ -786,6 +791,16 @@ var photosets = [
         "id": "7149172935", 
         "title": "DSC01708", 
         "url": "http://farm8.staticflickr.com/7072/7149172935_f02425b4ca.jpg"
+      }, 
+      {
+        "id": "7814220366", 
+        "title": "DSC01990", 
+        "url": "http://farm9.staticflickr.com/8428/7814220366_1abcaaf262.jpg"
+      }, 
+      {
+        "id": "7814228654", 
+        "title": "DSC02133", 
+        "url": "http://farm9.staticflickr.com/8432/7814228654_b1c56161dc.jpg"
       }
     ], 
     "title": "Piedras"
